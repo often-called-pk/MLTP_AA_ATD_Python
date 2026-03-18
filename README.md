@@ -1,8 +1,9 @@
-Python MLTP Framework: README
-Description
+# Python MLTP Framework
+
+## Description
 The Minimum Lap Time Problem (MLTP) framework calculates the absolute fastest trajectory a specific vehicle can take around a given track. Rather than using simulation to guess and check lap times, it uses optimal control theory. It looks at the entire track at once and calculates the perfect racing line, steering inputs, throttle, braking, and active aerodynamic settings simultaneously.
 
-How It Works
+## How It Works
 The framework treats the lap as a massive optimization problem built on direct collocation.
 
 Track Discretization: The program divides the track into hundreds of small segments based on distance, not time.
@@ -13,7 +14,7 @@ The Solver (IPOPT): The solver is given the task of minimizing the total time it
 
 Convergence: The solver iterates until it finds the absolute limit of the vehicle's physical capabilities along the perfect path.
 
-System Requirements
+## System Requirements
 Python 3.8+
 
 casadi (Version 3.5.5 or later)
@@ -24,7 +25,7 @@ scipy
 
 plotly
 
-Framework Structure
+## Framework Structure
 Aerodynamics/: Contains baseline aerodynamic maps derived from CFD.
 
 Circuits/: Track data files (.mat).
@@ -45,7 +46,7 @@ userOpts.py: Configuration file for selecting tracks, aero modes, and solver lim
 
 plotResults.py: Generates interactive Plotly graphs and exports the .mat solution.
 
-Getting Started
+# Getting Started
 Install dependencies via pip install casadi numpy scipy plotly.
 
 Define your track and vehicle configuration in Scripts/userOpts.py.
